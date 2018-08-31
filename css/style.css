@@ -1,0 +1,227 @@
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.row {
+  overflow: hidden;
+}
+
+body, header h1, .main .results dl, .main .results dt, .main .results dd, .main .buttons p, .main .buttons ul, .main .buttons .button p, .main .arena .row div[class*="col-"] .vs p, .main .comment, .main .comment .slogan h2, footer, footer h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: 'Combo', cursive;
+  background-image: radial-gradient(#ffd297 0%, #fcb354 100%);
+  background-repeat: no-repeat;
+}
+
+header {
+  height: 15vh;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.main {
+  height: calc(85vh - 22px);
+}
+
+.main .results {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.main .results dl {
+  display: inline-block;
+}
+
+.main .results dt, .main .results dd {
+  float: left;
+  font-size: 1.8em;
+  text-transform: capitalize;
+}
+
+.main .results dd {
+  padding: 0 15px 0 5px;
+}
+
+.main .buttons {
+  height: 50px;
+  width: 100%;
+}
+
+.main .buttons p {
+  display: inline-block;
+  float: left;
+  margin: 0 15px 0 50px;
+  line-height: 50px;
+  font-size: 1.5em;
+}
+
+.main .buttons ul {
+  list-style-type: none;
+}
+
+.main .buttons li {
+  float: left;
+  margin-right: 15px;
+}
+
+.main .buttons img {
+  width: auto;
+  height: 46px;
+  border: #be54fc solid 2px;
+  border-radius: 5px;
+}
+
+.main .buttons img:hover {
+  background-color: #be54fc;
+  cursor: pointer;
+}
+
+.main .buttons .button {
+  height: 46px;
+  float: right;
+  margin-right: 50px;
+  border: #be54fc solid 2px;
+  border-radius: 5px;
+}
+
+.main .buttons .button p {
+  padding: 0 5px 0 5px;
+}
+
+.main .buttons .button p:hover {
+  background-color: #be54fc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main .arena {
+  text-align: center;
+}
+
+.main .arena .row {
+  width: 100%;
+}
+
+.main .arena .row div[class*="col-"] {
+  float: left;
+}
+
+.main .arena .row div[class*="col-"] .player p {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.main .arena .row div[class*="col-"] .vs p {
+  line-height: 300px;
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.main .arena .row div[class*="col-"] .start, .main .arena .row div[class*="col-"] .paper, .main .arena .row div[class*="col-"] .stone, .main .arena .row div[class*="col-"] .scissors {
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  background-size: 100% 100%;
+}
+
+.main .arena .row div[class*="col-"] .flip {
+  transform: scaleX(-1);
+}
+
+.main .arena .row div[class*="col-"] .start {
+  background-image: url("http://51.38.131.156/TheGame/questionMark.png");
+}
+
+.main .arena .row div[class*="col-"] .paper {
+  background-image: url("http://51.38.131.156/TheGame/paper.png");
+}
+
+.main .arena .row div[class*="col-"] .stone {
+  background-image: url("http://51.38.131.156/TheGame/stone.png");
+}
+
+.main .arena .row div[class*="col-"] .scissors {
+  background-image: url("http://51.38.131.156/TheGame/scissors.png");
+}
+
+.main .comment {
+  margin-top: 15px;
+}
+
+.main .comment .slogan {
+  text-align: center;
+}
+
+.main .comment .output {
+  width: 70%;
+  height: 65px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  overflow-y: auto;
+}
+
+footer {
+  height: 22px;
+  text-align: center;
+}
+
+/* GRID */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,184 @@
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.row {
+	overflow: hidden;
+}
+%noMarPad {
+	margin: 0;
+	padding: 0;
+}
+body {
+	@extend %noMarPad;
+	box-sizing: border-box;
+	height: 100vh;
+	font-family: 'Combo', cursive;
+	background-image: radial-gradient(#ffd297 0%, #fcb354 100%);
+	background-repeat: no-repeat;
+}
+header {
+	height: 15vh;
+	font-size: 2.5em;
+	text-align: center;
+	h1 {
+		@extend %noMarPad;
+	}
+}
+.main {
+	height: calc(85vh - 22px);
+	.results {
+		width: 100%;
+		height: 50px;
+		text-align: center;
+		dl {
+			@extend %noMarPad;
+			display: inline-block;
+		}
+		dt {
+			@extend %noMarPad;
+			float: left;
+			font-size: 1.8em;
+			text-transform: capitalize;
+		}
+		dd {
+			@extend dt;
+			padding: 0 15px 0 5px;
+		}
+	}
+	.buttons {
+		height: 50px;
+		width: 100%;
+		p {
+			@extend %noMarPad;
+			display: inline-block;
+			float: left;
+			margin: 0 15px 0 50px;
+			line-height: 50px;
+			font-size: 1.5em;
+		}
+		ul {
+			@extend %noMarPad;
+			list-style-type: none;
+		}
+		li {
+			float: left;
+			margin-right: 15px;
+		}
+		img {
+			width: auto;
+			height: 46px;
+			border: #be54fc solid 2px;
+			border-radius: 5px;
+			&:hover {
+				background-color: #be54fc;
+				cursor: pointer;
+			}
+		}
+		.button {
+			height: 46px;
+			float: right;
+			margin-right: 50px;
+			border: #be54fc solid 2px;
+			border-radius: 5px;
+			p {
+				@extend %noMarPad;
+				padding: 0 5px 0 5px;
+				&:hover {
+				background-color: #be54fc;
+				color: #fff;
+				cursor: pointer;
+			}
+			}
+
+		}
+	}
+	.arena {
+		text-align: center;
+		.row {
+			width: 100%;
+			div[class*="col-"] {
+				float: left;
+				.player {
+					p {
+						font-size: 2em;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+				}
+				.vs {
+					p {
+						@extend %noMarPad;
+						line-height: 300px;
+						font-size: 5em;
+						font-weight: bold;
+					}
+				}
+				%background {
+					margin: 0 auto;
+					height: 200px;
+					width: 200px;
+					background-size: 100% 100%;
+				}
+				.flip {
+					transform:scaleX(-1);
+				}
+				.start {
+					@extend %background;
+					background-image: url("http://51.38.131.156/TheGame/questionMark.png");
+				}
+				.paper {
+					@extend %background;
+					background-image: url("http://51.38.131.156/TheGame/paper.png");
+				}
+				.stone {
+					@extend %background;
+					background-image: url("http://51.38.131.156/TheGame/stone.png");
+				}
+				.scissors {
+					@extend %background;
+					background-image: url("http://51.38.131.156/TheGame/scissors.png");
+				}
+			}
+		}
+	}
+	.comment {
+		@extend %noMarPad;
+		margin-top: 15px;
+		.slogan {
+			text-align: center;
+			h2 {
+				@extend %noMarPad;
+			}
+		}
+		.output {
+			width: 70%;
+			height: 65px;
+			margin: 0 auto;
+			font-size: 1.2em;
+			overflow-y: auto;
+		}
+	}
+}
+footer {
+	@extend %noMarPad;
+	height: 22px;
+	text-align: center;
+	h3 {
+		@extend %noMarPad;
+	}
+}
+/* GRID */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
