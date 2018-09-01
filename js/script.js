@@ -18,6 +18,7 @@ var buttonNewGame = document.getElementById('newGame');
 var background1 = document.getElementById('player');
 var background2 = document.getElementById('cpu');
 var output = document.getElementById('output');
+var bestOf = document.getElementById('bestOf')
 
 var cpu = function() {
 	return Math.floor((Math.random() * 3) + 1);
@@ -121,26 +122,26 @@ var entireGame = function() {
 	if (newGame == true && winCounter == rounds && winCounter > 0) {
 		output.insertAdjacentHTML('afterbegin', 'YOU WON THE GAME!!!<br>Master "moose the wise" WORSHIP YOU<br>Click NEW GAME to play<br>');
 		newGame = false;
-		winCounter = 0;
+		/*winCounter = 0;
 		drawCounter = 0;
 		lossCounter = 0;
 		playerBackground(0);
 		cpuBackground(0);
 		win.innerHTML = winCounter;
 		loss.innerHTML = lossCounter;
-		draw.innerHTML = drawCounter;
+		draw.innerHTML = drawCounter;*/
 	}
 	else if (newGame == true && lossCounter == rounds && lossCounter > 0) {
 		output.insertAdjacentHTML('afterbegin', 'YOU LOST THE GAME!!!<br>Master "moose the wise" DESPISES YOU<br>Click NEW GAME to play<br>');
 		newGame = false;
-		winCounter = 0;
+		/*winCounter = 0;
 		drawCounter = 0;
 		lossCounter = 0;
 		playerBackground(0);
 		cpuBackground(0);
 		win.innerHTML = winCounter;
 		loss.innerHTML = lossCounter;
-		draw.innerHTML = drawCounter;
+		draw.innerHTML = drawCounter;*/
 	}
 }
 var conlog = function() {
@@ -163,10 +164,19 @@ buttonNewGame.addEventListener('click', function() {
 	if (isNaN(rounds) == false && rounds != '' && rounds > 0 && rounds != 'null') {
 		newGame = true;
 		output.insertAdjacentHTML('afterbegin', '"THE GAME!!!" - Best of ' + ((rounds * 2) - 1) + '<br>You have to win ' + rounds + ' rounds to WIN<br>Click your weapon and play<br>');
+		bestOf.innerHTML = '<p><small> Best of: ' + ((rounds * 2) - 1) + '</small></p>';
 	}
-	else {
+	else {			
 		output.insertAdjacentHTML('afterbegin', 'THE GAME!!!<br>INVALID ROUNDS NUMBER!!!<br>Type correct rounds number and click NEW GAME to play<br>');
 	}
+	winCounter = 0;
+	drawCounter = 0;
+	lossCounter = 0;
+	playerBackground(0);
+	cpuBackground(0);
+	win.innerHTML = winCounter;
+	loss.innerHTML = lossCounter;
+	draw.innerHTML = drawCounter;
 	conlog();
 });
 button1.addEventListener('click', function() {
