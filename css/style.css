@@ -15,7 +15,7 @@ body, header h1, .main .results dl, .main .results dt, .main .results dd, .main 
 
 body {
   box-sizing: border-box;
-  height: 100vh;
+  /*height: 100vh;*/
   font-family: 'Combo', cursive;
   background-image: radial-gradient(#ffd297 0%, #fcb354 100%);
   background-repeat: no-repeat;
